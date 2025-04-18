@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example Projects and Tutorials - Programming with Scratch</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Example Projects and Tutorials</h1>
+        <p>Section 8: Step-by-Step Guides for Creating Scratch Projects</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="section1.html">Introduction</a></li>
+            <li><a href="section2.html">Getting Started</a></li>
+            <li><a href="section3.html">Block Categories</a></li>
+            <li><a href="section4.html">Programming Fundamentals</a></li>
+            <li><a href="section5.html">Sprites & Costumes</a></li>
+            <li><a href="section6.html">Interactive Projects</a></li>
+            <li><a href="section7.html">STEM Applications</a></li>
+            <li><a href="section8.html">Example Projects</a></li>
+            <li><a href="section9.html">Advanced Features</a></li>
+            <li><a href="section10.html">Assessment</a></li>
+            <li><a href="section11.html">Resources</a></li>
+            <li><a href="exercises.html">Exercises</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="section">
+            <h2>Learning Through Examples</h2>
+            <p>Example projects and step-by-step tutorials are powerful tools for learning Scratch programming. They provide concrete demonstrations of concepts and techniques that students can follow, modify, and extend.</p>
+            
+            <h3>Benefits of Example Projects:</h3>
+            <ul>
+                <li><strong>Concrete Models</strong>: Show practical applications of abstract concepts</li>
+                <li><strong>Scaffolded Learning</strong>: Break down complex projects into manageable steps</li>
+                <li><strong>Inspiration</strong>: Provide ideas and starting points for original projects</li>
+                <li><strong>Debugging Practice</strong>: Help students learn to identify and fix errors</li>
+                <li><strong>Remixing Opportunities</strong>: Allow students to build upon existing work</li>
+            </ul>
+            
+            <p>In this section, we'll explore several example projects that demonstrate different aspects of Scratch programming and STEM applications.</p>
+        </section>
+
+        <section class="section">
+            <h2>Tutorial 1: Simple Animation</h2>
+            <p>This tutorial demonstrates how to create a basic animation using costume changes and movement.</p>
+            
+            <h3>Project Goal:</h3>
+            <p>Create a character that walks across the screen with a realistic walking animation.</p>
+            
+            <h3>Step 1: Set Up the Sprite</h3>
+            <ol>
+                <li>Choose a character sprite from the library or draw your own</li>
+                <li>Make sure the sprite has multiple costumes that show different walking positions</li>
+                <li>If needed, create additional costumes by duplicating and modifying existing ones</li>
+            </ol>
+            
+            <h3>Step 2: Create the Walking Animation</h3>
+            <div class="block-container">
+                <div class="events-block">when green flag clicked</div>
+                <div class="motion-block">go to x: [-200] y: [0]</div>
+                <div class="control-block">forever</div>
+                <div style="margin-left: 20px;">
+                    <div class="looks-block">next costume</div>
+                    <div class="motion-block">change x by [5]</div>
+                    <div class="control-block">wait [0.2] seconds</div>
+                    <div class="control-block">if &lt;<div class="operators-block">[x position] > [240]</div>&gt; then</div>
+                    <div style="margin-left: 20px;">
+                        <div class="motion-block">go to x: [-200] y: [0]</div>
+                    </div>
+                </div>
+            </div>
+            
+            <h3>Step 3: Add Direction Changes</h3>
+            <div class="block-container">
+                <div class="events-block">when green flag clicked</div>
+                <div class="motion-block">go to x: [-200] y: [0]</div>
+                <div class="looks-block">set rotation style [left-right]</div>
+                <div class="control-block">forever</div>
+                <div style="margin-left: 20px;">
+                    <div class="looks-block">next costume</div>
+                    <div class="motion-block">change x by [5]</div>
+                    <div class="control-block">wait [0.2] seconds</div>
+                    <div class="control-block">if &lt;<div class="operators-block">[x position] > [240]</div>&gt; then</div>
+                    <div style="margin-left: 20px;">
+                        <div class="motion-block">point in direction [-180]</div>
+                    </div>
+                    <div class="control-block">if &lt;<div class="operators-block">[x position] < [-240]</div>&gt; then</div>
+                    <div style="margin-left: 20px;">
+                        <div class="motion-block">point in direction [0]</div>
+                    </div>
+                </div>
+            </div>
+            
+            <h3>Extensions:</h3>
+            <ul>
+                <li>Add a changing backdrop to create a scrolling effect</li>
+                <li>Include sound effects for footsteps</li>
+                <li>Add user controls to change the character's speed or direction</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Tutorial 2: Interactive Story</h2>
+            <p>This tutorial demonstrates how to create a simple interactive story with branching paths.</p>
+            
+            <h3>Project Goal:</h3>
+            <p>Create a story where the user makes choices that affect the outcome.</p>
+            
+            <h3>Step 1: Plan Your Story</h3>
+            <ol>
+                <li>Create a flowchart of your story with decision points</li>
+                <li>Prepare backdrops for different scenes</li>
+                <li>Create or select sprites for characters</li>
+            </ol>
+            
+            <h3>Step 2: Set Up the Introduction</h3>
+            <div class="block-container">
+                <div class="events-block">when green flag clicked</div>
+                <div class="looks-block">switch backdrop to [scene1]</div>
+                <div class="looks-block">say [Welcome to the adventure!] for [3] seconds</div>
+                <div class="looks-block">say [You find yourself at a crossroads...] for [3] seconds</div>
+                <div class="sensing-block">ask [Do you go left or right? (type "left" or "right")] and wait</div>
+            </div>
+            
+            <h3>Step 3: Create Branching Paths</h3>
+            <div class="block-container">
+                <div class="control-block">if &lt;<div class="operators-block">[answer] = [left]</div>&gt; then</div>
+                <div style="margin-left: 20px;">
+                    <div class="looks-block">switch backdrop to [forest]</div>
+                    <div class="looks-block">say [You enter a dense forest...] for [3] seconds</div>
+                    <div class="sensing-block">ask [Do you follow the path or explore? (type "path" or "explore")] and wait</div>
+                    <div class="control-block">if &lt;<div class="operators-block">[answer] = [path]</div>&gt; then</div>
+                    <div style="margin-left: 20px;">
+                        <div class="looks-block">switch backdrop to [cabin]</div>
+                        <div class="looks-block">say [You find a cozy cabin!] for [3] seconds</div>
+                    </div>
+                    <div class="control-block">else</div>
+                    <div style="margin-left: 20px;">
+                        <div class="looks-block">switch backdrop to [cave]</div>
+                        <div class="looks-block">say [You discover a mysterious cave...] for [3] seconds</div>
+                    </div>
+                </div>
+                <div class="control-block">else</div>
+                <div style="margin-left: 20px;">
+                    <div class="looks-block">switch backdrop to [river]</div>
+                    <div class="looks-block">say [You arrive at a flowing river...] for [3] seconds</div>
+                    <div class="sensing-block">ask [Do you swim across or look for a bridge? (type "swim" or "bridge")] and wait</div>
+                    <div class="control-block">if &lt;<div class="operators-block">[answer] = [swim]</div>&gt; then</div>
+                    <div style="margin-left: 20px;">
+                        <div class="looks-block">switch backdrop to [waterfall]</div>
+                        <div class="looks-block">say [You're swept away to a beautiful waterfall!] for [3] seconds</div>
+                    </div>
+                    <div class="control-block">else</div>
+                    <div style="margin-left: 20px;">
+                        <div class="looks-block">switch backdrop to [village]</div>
+                        <div class="looks-block">say [You find a bridge that leads to a village!] for [3] seconds</div>
+                    </div>
+                </div>
+            </div>
+            
+            <h3>Extensions:</h3>
+            <ul>
+                <li>Add more decision points and outcomes</li>
+                <li>Include variables to track the user's choices</li>
+                <li>Add character sprites that appear in different scenes</li>
+                <li>Include sound effects and music for different scenes</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Tutorial 3: Simple Game - Catch the Apple</h2>
+            <p>This tutorial demonstrates how to create a simple game with scoring and timing.</p>
+            
+            <h3>Project Goal:</h3>
+            <p>Create a game where the player controls a basket to catch falling apples.</p>
+            
+            <h3>Step 1: Set Up the Sprites</h3>
+            <ol>
+                <li>Create or select a basket sprite for the player to control</li>
+                <li>Create or select an apple sprite that will fall from the top</li>
+                <li>Choose a backdrop for your game</li>
+            </ol>
+            
+            <h3>Step 2: Program the Basket Movement</h3>
+            <div class="block-container">
+                <div class="events-block">when green flag clicked</div>
+                <div class="motion-block">go to x: [0] y: [-140]</div>
+                <div class="control-block">forever</div>
+                <div style="margin-left: 20px;">
+                    <div class="motion-block">set x to [mouse x]</div>
+                    <div class="control-block">if &lt;<div class="operators-block">[x position] < [-230]</div>&gt; then</div>
+                    <div style="margin-left: 20px;">
+                        <div class="motion-block">set x to [-230]</div>
+                    </div>
+                    <div class="control-block">if &lt;<div class="operators-block">[x position] > [230]</div>&gt; then</div>
+                    <div style="margin-left: 20px;">
+                        <div class="motion-block">set x to [230]</div>
+                    </div>
+                </div>
+            </div>
+            
+            <h3>Step 3: Program the Falling Apple</h3>
+            <div class="block-container">
+                <div class="events-block">when green flag clicked</div>
+                <div class="variables-block">set [score] to [0]</div>
+                <div class="variables-block">set [time] to [30]</div>
+                <div class="control-block">forever</div>
+                <div style="margin-left: 20px;">
+                    <div class="motion-block">go to x: [pick random [-230] to [230]] y: [180]</div>
+                    <div class="control-block">repeat until &lt;<div class="operators-block">[y position] < [-170]</div> or <div class="sensing-block">touching [Basket]?</div>&gt;</div>
+                    <div style="margin-left: 20px;">
+                        <div class="motion-block">change y by [-5]</div>
+                    </div>
+                    <div class="control-block">if &lt;<div class="sensing-block">touching [Basket]?</div>&gt; then</div>
+                    <div style="margin-left: 20px;">
+                        <div class="variables-block">change [score] by [1]</div>
+                        <div class="looks-block">play sound [pop]</div>
+                    </div>
+                </div>
+            </div>
+            
+            <h3>Step 4: Add Timer and Game Over</h3>
+            <div class="block-container">
+                <div class="events-block">when green flag clicked</div>
+                <div class="variables-block">set [time] to [30]</div>
+                <div class="control-block">repeat until &lt;<div class="operators-block">[time] = [0]</div>&gt;</div>
+                <div style="margin-left: 20px;">
+                    <div class="control-block">wait [1] seconds</div>
+                    <div class="variables-block">change [time] by [-1]</div>
+                </div>
+                <div class="looks-block">say [Game Over! Your score: ] <div class="variables-block">score</div> for [3] seconds</div>
+                <div class="control-block">stop [all]</div>
+            </div>
+            
+            <h3>Extensions:</h3>
+            <ul>
+                <li>Add different types of items to catch with different point values</li>
+                <li>Include items to avoid that reduce score or end the game</li>
+                <li>Add difficulty levels that increase speed over time</li>
+                <li>Create a high score system using variables</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Tutorial 4: STEM Project - Angle Simulator</h2>
+            <p>This tutorial demonstrates how to create a mathematical tool for exploring angles.</p>
+            
+            <h3>Project Goal:</h3>
+            <p>Create an interactive angle demonstrator that allows users to adjust angles and see their measurements.</p>
+            
+            <h3>Step 1: Set Up the Project</h3>
+            <ol>
+                <li>Create a sprite for the angle vertex (a small circle)</li>
+                <li>Create a sprite for the angle arm (a line)</li>
+                <li>Create a plain backdrop with a coordinate grid</li>
+            </ol>
+            
+            <h3>Step 2: Program the Fixed Arm</h3>
+            <div class="block-container">
+                <div class="events-block">when green flag clicked</div>
+                <div class="motion-block">go to x: [0] y: [0]</div>
+                <div class="looks-block">switch costume to [horizontal-line]</div>
+                <div class="motion-block">set rotation style [all around]</div>
+                <div class="motion-block">point in direction [0]</div>
+            </div>
+            
+            <h3>Step 3: Program the Movable Arm</h3>
+            <div class="block-container">
+                <div class="events-block">when green flag clicked</div>
+                <div class="variables-block">set [angle] to [0]</div>
+                <div class="motion-block">go to x: [0] y: [0]</div>
+                <div class="looks-block">switch costume to [line]</div>
+                <div class="motion-block">set rotation style [all around]</div>
+                <div class="motion-block">point in direction [0]</div>
+                <div class="control-block">forever</div>
+                <div style="margin-left: 20px;">
+                    <div class="motion-block">point in direction [angle]</div>
+                    <div class="looks-block">say [join [Angle: ] [join [angle] [°]]]</div>
+                </div>
+            </div>
+            
+            <h3>Step 4: Add User Controls</h3>
+            <div class="block-container">
+                <div class="events-block">when [right arrow] key pressed</div>
+                <div class="variables-block">change [angle] by [5]</div>
+                <div class="control-block">if &lt;<div class="operators-block">[angle] > [360]</div>&gt; then</div>
+                <div style="margin-left: 20px;">
+                    <div class="variables-block">set [angle] to [<div class="operators-block">[angle] - [360]</div>]</div>
+                </div>
+                
+                <div style="margin-top: 10px;"></div>
+                
+                <div class="events-block">when [left arrow] key pressed</div>
+                <div class="variables-block">change [angle] by [-5]</div>
+                <div class="control-block">if &lt;<div class="operators-block">[angle] < [0]</div>&gt; then</div>
+                <div style="margin-left: 20px;">
+                    <div class="variables-block">set [angle] to [<div class="operators-block">[angle] + [360]</div>]</div>
+                </div>
+            </div>
+            
+            <h3>Step 5: Add Real-World Examples</h3>
+            <div class="block-container">
+                <div class="events-block">when [space] key pressed</div>
+                <div class="control-block">if &lt;<div class="operators-block">[angle] = [90]</div>&gt; then</div>
+                <div style="margin-left: 20px;">
+                    <div class="looks-block">say [90° is a right angle, like the corner of a room or a piece of paper.] for [3] seconds</div>
+                </div>
+                <div class="control-block">else</div>
+                <div style="margin-left: 20px;">
+                    <div class="control-block">if &lt;<div class="operators-block">[angle] = [180]</div>&gt; then</div>
+                    <div style="margin-left: 20px;">
+                        <div class="looks-block">say [180° is a straight line, like a horizon or a flat surface.] for [3] seconds</div>
+                    </div>
+                    <div class="control-block">else</div>
+                    <div style="margin-left: 20px;">
+                        <div class="control-block">if &lt;<div class="operators-block">[angle] = [360]</div> or <div class="operators-block">[angle] = [0]</div>&gt; then</div>
+                        <div style="margin-left: 20px;">
+                            <div class="looks-block">say [360° (or 0°) is a full circle, like a wheel or a clock.] for [3] seconds</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <h3>Extensions:</h3>
+            <ul>
+                <li>Add a protractor image that aligns with the angle</li>
+                <li>Include calculations for complementary and supplementary angles</li>
+                <li>Add trigonometric functions (sine, cosine, tangent) of the angle</li>
+                <li>Create a game where students must create specific angles</li>
+            </ul>
+            
+            <div class="example-project">
+                <h3>Next Steps</h3>
+                <p>Now that you've seen some example projects and tutorials, let's explore advanced features in Scratch that can take your projects to the next level.</p>
+                <p><a href="section9.html">Continue to Section 9: Advanced Scratch Features →</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Based on resources from the <a href="https://en.scratch-wiki.info/" target="_blank">Scratch Wiki platform</a>.</p>
+        <p>&copy; 2025 Introduction to Programming with Scratch - A STEM Education Course</p>
+    </footer>
+</body>
+</html>

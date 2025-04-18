@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Scratch Features - Programming with Scratch</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Advanced Scratch Features</h1>
+        <p>Section 9: Taking Your Scratch Projects to the Next Level</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="section1.html">Introduction</a></li>
+            <li><a href="section2.html">Getting Started</a></li>
+            <li><a href="section3.html">Block Categories</a></li>
+            <li><a href="section4.html">Programming Fundamentals</a></li>
+            <li><a href="section5.html">Sprites & Costumes</a></li>
+            <li><a href="section6.html">Interactive Projects</a></li>
+            <li><a href="section7.html">STEM Applications</a></li>
+            <li><a href="section8.html">Example Projects</a></li>
+            <li><a href="section9.html">Advanced Features</a></li>
+            <li><a href="section10.html">Assessment</a></li>
+            <li><a href="section11.html">Resources</a></li>
+            <li><a href="exercises.html">Exercises</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="section">
+            <h2>Beyond the Basics</h2>
+            <p>Once you've mastered the fundamental concepts of Scratch programming, you can explore advanced features that enable more sophisticated projects. These features allow for more complex interactions, better organization, and enhanced functionality.</p>
+            
+            <h3>In This Section:</h3>
+            <ul>
+                <li>Cloning: Creating multiple instances of sprites</li>
+                <li>Lists: Storing and manipulating collections of data</li>
+                <li>Custom Blocks: Creating your own reusable code blocks</li>
+                <li>Broadcasting: Coordinating actions between sprites</li>
+                <li>Extensions: Adding new capabilities to Scratch</li>
+                <li>Cloud Variables: Sharing data between users</li>
+            </ul>
+            
+            <p>These advanced features can significantly enhance your Scratch projects, especially for STEM education applications that require more complex functionality.</p>
+        </section>
+
+        <section class="section">
+            <h2>Cloning</h2>
+            <p>Cloning allows you to create multiple instances of a sprite during program execution. This is useful for creating multiple similar objects without having to program each one individually.</p>
+            
+            <h3>Key Concepts:</h3>
+            <ul>
+                <li><strong>Clone Creation</strong>: Making copies of sprites during runtime</li>
+                <li><strong>Clone Behavior</strong>: Programming how clones behave</li>
+                <li><strong>Clone Management</strong>: Creating and deleting clones as needed</li>
+            </ul>
+            
+            <div class="block-container">
+                <div class="control-block">create clone of [myself]</div>
+                <p>Creates a copy of the sprite that runs its own scripts.</p>
+                
+                <div class="events-block">when I start as a clone</div>
+                <p>Starts a script when a clone is created.</p>
+                
+                <div class="control-block">delete this clone</div>
+                <p>Removes the clone from the project.</p>
+            </div>
+            
+            <h3>Example: Fireworks Display</h3>
+            <div class="block-container">
+                <div class="events-block">when green flag clicked</div>
+                <div class="looks-block">hide</div>
+                <div class="control-block">forever</div>
+                <div style="margin-left: 20px;">
+                    <div class="control-block">wait [pick random [1] to [3]] seconds</div>
+                    <div class="motion-block">go to x: [pick random [-200] to [200]] y: [-150]</div>
+                    <div class="control-block">create clone of [myself]</div>
+                </div>
+                
+                <div style="margin-top: 10px;"></div>
+                
+                <div class="events-block">when I start as a clone</div>
+                <div class="looks-block">show</div>
+                <div class="variables-block">set [speed] to [pick random [5] to [10]]</div>
+                <div class="control-block">repeat [20]</div>
+                <div style="margin-left: 20px;">
+                    <div class="motion-block">change y by [speed]</div>
+                    <div class="variables-block">change [speed] by [-0.5]</div>
+                </div>
+                <div class="control-block">repeat [10]</div>
+                <div style="margin-left: 20px;">
+                    <div class="control-block">create clone of [myself]</div>
+                    <div class="motion-block">point in direction [pick random [0] to [360]]</div>
+                </div>
+                <div class="looks-block">change [color] effect by [25]</div>
+                <div class="control-block">repeat [20]</div>
+                <div style="margin-left: 20px;">
+                    <div class="motion-block">move [10] steps</div>
+                    <div class="looks-block">change [ghost] effect by [5]</div>
+                </div>
+                <div class="control-block">delete this clone</div>
+            </div>
+            
+            <p>This example creates a fireworks display by launching "rockets" that explode into multiple particles, each represented by a clone.</p>
+            
+            <h3>Applications in STEM Education:</h3>
+            <ul>
+                <li><strong>Physics</strong>: Simulating particle systems, molecular motion</li>
+                <li><strong>Biology</strong>: Modeling cell division, population growth</li>
+                <li><strong>Mathematics</strong>: Demonstrating fractals, probability</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Lists</h2>
+            <p>Lists allow you to store and manipulate collections of data. They are similar to arrays in other programming languages and enable more complex data handling.</p>
+            
+            <h3>Key Concepts:</h3>
+            <ul>
+                <li><strong>List Creation</strong>: Making lists to store multiple values</li>
+                <li><strong>List Operations</strong>: Adding, removing, and changing list items</li>
+                <li><strong>List Access</strong>: Retrieving values from specific positions</li>
+                <li><strong>List Properties</strong>: Checking length and contents</li>
+            </ul>
+            
+            <div class="block-container">
+                <div class="variables-block">add [thing] to [my list]</div>
+                <p>Adds an item to the end of a list.</p>
+                
+                <div class="variables-block">delete [1] of [my list]</div>
+                <p>Removes an item from a specific position in the list.</p>
+                
+                <div class="variables-block">insert [thing] at [1] of [my list]</div>
+                <p>Adds an item at a specific position in the list.</p>
+                
+                <div class="variables-block">replace item [1] of [my list] with [thing]</div>
+                <p>Changes the value of an item at a specific position.</p>
+                
+                <div class="variables-block">item [1] of [my list]</div>
+                <p>Reports the value of an item at a specific position.</p>
+                
+                <div class="variables-block">length of [my list]</div>
+                <p>Reports the number of items in the list.</p>
+                
+                <div class="variables-block">[my list] contains [thing]?</div>
+                <p>Checks if a specific item is in the list.</p>
+            </div>
+            
+            <h3>Example: To-Do List Application</h3>
+            <div class="block-container">
+                <div class="events-block">when green flag clicked</div>
+                <div class="variables-block">delete [all] of [tasks]</div>
+                <div class="control-block">forever</div>
+                <div style="margin-left: 20px;">
+                    <div class="sensing-block">ask [Enter a task (or type "view" to see your list):] and wait</div>
+                    <div class="control-block">if &lt;<div class="operators-block">[answer] = [view]</div>&gt; then</div>
+                    <div style="margin-left: 20px;">
+                        <div class="control-block">if &lt;<div class="operators-block">[length of [tasks]] = [0]</div>&gt; then</div>
+                        <div style="margin-left: 20px;">
+                            <div class="looks-block">say [Your to-do list is empty.] for [2] seconds</div>
+                        </div>
+                        <div class="control-block">else</div>
+                        <div style="margin-left: 20px;">
+                            <div class="variables-block">set [index] to [1]</div>
+                            <div class="control-block">repeat [length of [tasks]]</div>
+                            <div style="margin-left: 20px;">
+                                <div class="looks-block">say [join [index] [join [. ] [item [index] of [tasks]]]] for [2] seconds</div>
+                                <div class="variables-block">change [index] by [1]</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="control-block">else</div>
+                    <div style="margin-left: 20px;">
+                        <div class="variables-block">add [answer] to [tasks]</div>
+                        <div class="looks-block">say [Task added!] for [1] seconds</div>
+                    </div>
+                </div>
+            </div>
+            
+            <p>This example creates a simple to-do list application where users can add tasks and view their list.</p>
+            
+            <h3>Applications in STEM Education:</h3>
+            <ul>
+                <li><strong>Data Science</strong>: Collecting and analyzing data</li>
+                <li><strong>Mathematics</strong>: Working with sequences, sets</li>
+                <li><strong>Computer Science</strong>: Implementing algorithms that use data structures</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Custom Blocks</h2>
+            <p>Custom blocks (also called "My Blocks") allow you to create your own reusable code blocks. They help organize code, reduce repetition, and create higher-level abstractions.</p>
+            
+            <h3>Key Concepts:</h3>
+            <ul>
+                <li><strong>Block Definition</strong>: Creating new blocks with specific functionality</li>
+                <li><strong>Parameters</strong>: Adding inputs to customize block behavior</li>
+                <li><strong>Abstraction</strong>: Hiding implementation details behind a simple interface</li>
+                <li><strong>Reusability</strong>: Using the same block in multiple places</li>
+            </ul>
+            
+            <div class="block-container">
+                <div class="my-blocks-block">define [draw square [size]]</div>
+                <p>Creates a new custom block, potentially with parameters.</p>
+            </div>
+            
+            <h3>Example: Drawing Shapes</h3>
+            <div class="block-container">
+                <div class="my-blocks-block">define [draw polygon [sides] [size]]</div>
+                <div class="motion-block">pen down</div>
+                <div class="variables-block">set [angle] to [<div class="operators-block">[360] / [sides]</div>]</div>
+                <div class="control-block">repeat [sides]</div>
+                <div style="margin-left: 20px;">
+                    <div class="motion-block">move [size] steps</div>
+                    <div class="motion-block">turn right [angle] degrees</div>
+                </div>
+                <div class="motion-block">pen up</div>
+                
+                <div style="margin-top: 10px;"></div>
+                
+                <div class="events-block">when green flag clicked</div>
+                <div class="my-blocks-block">draw polygon [4] [100]</div>
+                <div class="motion-block">change x by [150]</div>
+                <div class="my-blocks-block">draw polygon [6] [50]</div>
+                <div class="motion-block">change y by [-150]</div>
+                <div class="my-blocks-block">draw polygon [3] [100]</div>
+            </div>
+            
+            <p>This example creates a custom block for drawing regular polygons with a specified number of sides and size, then uses it to draw different shapes.</p>
+            
+            <h3>Applications in STEM Education:</h3>
+            <ul>
+                <li><strong>Mathematics</strong>: Creating procedures for geometric constructions</li>
+                <li><strong>Computer Science</strong>: Teaching procedural abstraction and modularity</li>
+                <li><strong>Engineering</strong>: Building reusable components for simulations</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Broadcasting</h2>
+            <p>Broadcasting allows sprites to communicate with each other by sending and receiving messages. It's useful for coordinating actions between different parts of your project.</p>
+            
+            <h3>Key Concepts:</h3>
+            <ul>
+                <li><strong>Message Sending</strong>: Broadcasting a message to all sprites</li>
+                <li><strong>Message Receiving</strong>: Responding to broadcast messages</li>
+                <li><strong>Synchronization</strong>: Coordinating actions between sprites</li>
+                <li><strong>Event-Driven Programming</strong>: Responding to events rather than following a fixed sequence</li>
+            </ul>
+            
+            <div class="block-container">
+                <div class="events-block">broadcast [message1]</div>
+                <p>Sends a message to all sprites and continues immediately.</p>
+                
+                <div class="events-block">broadcast [message1] and wait</div>
+                <p>Sends a message and waits for all triggered scripts to complete.</p>
+                
+                <div class="events-block">when I receive [message1]</div>
+                <p>Starts a script when the specified message is received.</p>
+            </div>
+            
+            <h3>Example: Multi-Character Story</h3>
+            <div class="block-container">
+                <div class="events-block">when green flag clicked</div>
+                <div class="looks-block">switch backdrop to [scene1]</div>
+                <div class="looks-block">say [Once upon a time...] for [3] seconds</div>
+                <div class="events-block">broadcast [character1 enter]</div>
+                <div class="control-block">wait [5] seconds</div>
+                <div class="events-block">broadcast [character2 enter]</div>
+                <div class="control-block">wait [5] seconds</div>
+                <div class="events-block">broadcast [scene change]</div>
+                
+                <div style="margin-top: 10px;"></div>
+                
+                <div class="events-block">when I receive [character1 enter]</div>
+                <div class="motion-block">go to x: [-150] y: [-100]</div>
+                <div class="looks-block">show</div>
+                <div class="looks-block">say [Hello there!] for [3] seconds</div>
+                
+                <div style="margin-top: 10px;"></div>
+                
+                <div class="events-block">when I receive [scene change]</div>
+                <div class="looks-block">switch backdrop to [scene2]</div>
+                <div class="events-block">broadcast [continue story]</div>
+            </div>
+            
+            <p>This example uses broadcasting to coordinate a story with multiple characters and scene changes.</p>
+            
+            <h3>Applications in STEM Education:</h3>
+            <ul>
+                <li><strong>Biology</strong>: Modeling cell signaling, ecosystem interactions</li>
+                <li><strong>Physics</strong>: Simulating action-reaction pairs, wave propagation</li>
+                <li><strong>Computer Science</strong>: Teaching event-driven programming, message passing</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Extensions</h2>
+            <p>Extensions add new capabilities to Scratch, allowing you to work with external hardware, access additional features, or use specialized blocks for specific purposes.</p>
+            
+            <h3>Available Extensions:</h3>
+            <ul>
+                <li><strong>Music</strong>: Play instruments and drum sounds</li>
+                <li><strong>Pen</strong>: Draw with sprites using advanced pen features</li>
+                <li><strong>Video Sensing</strong>: Detect motion in video from a camera</li>
+                <li><strong>Text to Speech</strong>: Convert text to spoken audio</li>
+                <li><strong>Translate</strong>: Translate text between languages</li>
+                <li><strong>Micro:bit</strong>: Connect to BBC micro:bit hardware</li>
+                <li><strong>LEGO MINDSTORMS</strong>: Control LEGO robots</li>
+                <li><strong>LEGO Education WeDo 2.0</strong>: Control LEGO WeDo devices</li>
+                <li><strong>makey makey</strong>: Interact with Makey Makey input devices</li>
+            </ul>
+            
+            <h3>Example: Using the Pen Extension</h3>
+            <div class="block-container">
+                <div class="events-block">when green flag clicked</div>
+                <div class="looks-block">clear</div>
+                <div class="motion-block">pen up</div>
+                <div class="motion-block">go to x: [0] y: [0]</div>
+                <div class="looks-block">set pen color to [#FF0000]</div>
+                <div class="looks-block">set pen size to [5]</div>
+                <div class="motion-block">pen down</div>
+                <div class="variables-block">set [sides] to [6]</div>
+                <div class="variables-block">set [length] to [100]</div>
+                <div class="control-block">repeat [sides]</div>
+                <div style="margin-left: 20px;">
+                    <div class="motion-block">move [length] steps</div>
+                    <div class="motion-block">turn right [<div class="operators-block">[360] / [sides]</div>] degrees</div>
+                </div>
+            </div>
+            
+            <p>This example uses the Pen extension to draw a regular polygon with a specified number of sides.</p>
+            
+            <h3>Applications in STEM Education:</h3>
+            <ul>
+                <li><strong>Robotics</strong>: Programming physical devices</li>
+                <li><strong>Art and Design</strong>: Creating complex drawings and patterns</li>
+                <li><strong>Linguistics</strong>: Exploring language translation and speech synthesis</li>
+                <li><strong>Physical Computing</strong>: Connecting digital and physical worlds</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Cloud Variables</h2>
+            <p>Cloud variables allow data to be shared between different users running the same Scratch project. They enable collaborative projects and persistent data storage.</p>
+            
+            <h3>Key Concepts:</h3>
+            <ul>
+                <li><strong>Cloud Storage</strong>: Storing data on Scratch servers</li>
+                <li><strong>Shared Access</strong>: Multiple users accessing the same variables</li>
+                <li><strong>Real-time Updates</strong>: Changes by one user visible to others</li>
+                <li><strong>Persistence</strong>: Data remains available between sessions</li>
+            </ul>
+            
+            <p>To create a cloud variable, prefix the variable name with the cloud symbol (☁) when creating it. Cloud variables are only available to users who are logged in to Scratch.</p>
+            
+            <h3>Example: Collaborative Counter</h3>
+            <div class="block-container">
+                <div class="events-block">when green flag clicked</div>
+                <div class="looks-block">say [This project has been run ] <div class="variables-block">☁ counter</div> [ times!] for [2] seconds</div>
+                <div class="variables-block">change [☁ counter] by [1]</div>
+            </div>
+            
+            <p>This simple example increments a cloud variable each time the project is run, allowing users to see how many times the project has been started by all users.</p>
+            
+            <h3>Applications in STEM Education:</h3>
+            <ul>
+                <li><strong>Citizen Science</strong>: Collecting data from multiple users</li>
+                <li><strong>Collaborative Research</strong>: Sharing findings between students</li>
+                <li><strong>Social Studies</strong>: Conducting surveys and analyzing results</li>
+                <li><strong>Game Design</strong>: Creating multiplayer experiences</li>
+            </ul>
+            
+            <div class="example-project">
+                <h3>Next Steps</h3>
+                <p>Now that you understand advanced Scratch features, let's explore how to assess student learning and track progression in Scratch programming.</p>
+                <p><a href="section10.html">Continue to Section 10: Assessment and Learning Progression →</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Based on resources from the <a href="https://en.scratch-wiki.info/" target="_blank">Scratch Wiki platform</a>.</p>
+        <p>&copy; 2025 Introduction to Programming with Scratch - A STEM Education Course</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating Interactive Projects - Programming with Scratch</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Creating Interactive Projects</h1>
+        <p>Section 6: Building Projects that Respond to User Input</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="section1.html">Introduction</a></li>
+            <li><a href="section2.html">Getting Started</a></li>
+            <li><a href="section3.html">Block Categories</a></li>
+            <li><a href="section4.html">Programming Fundamentals</a></li>
+            <li><a href="section5.html">Sprites & Costumes</a></li>
+            <li><a href="section6.html">Interactive Projects</a></li>
+            <li><a href="section7.html">STEM Applications</a></li>
+            <li><a href="section8.html">Example Projects</a></li>
+            <li><a href="section9.html">Advanced Features</a></li>
+            <li><a href="section10.html">Assessment</a></li>
+            <li><a href="section11.html">Resources</a></li>
+            <li><a href="exercises.html">Exercises</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="section">
+            <h2>Understanding Interactivity</h2>
+            <p>Interactivity is what makes Scratch projects engaging and dynamic. Interactive projects respond to user input and create a two-way experience between the user and the program.</p>
+            
+            <h3>Types of Interactivity in Scratch:</h3>
+            <ul>
+                <li><strong>User Input</strong>: Responding to keyboard, mouse, or microphone input</li>
+                <li><strong>Conditional Responses</strong>: Changing behavior based on user actions</li>
+                <li><strong>Feedback</strong>: Providing visual or auditory feedback to user actions</li>
+                <li><strong>Dialogue</strong>: Creating conversations or prompts for user input</li>
+                <li><strong>Game Mechanics</strong>: Implementing rules, scoring, and challenges</li>
+            </ul>
+            
+            <p>In this section, we'll explore how to create projects that respond to various forms of user input and provide engaging interactive experiences.</p>
+        </section>
+
+        <section class="section">
+            <h2>Keyboard Interaction</h2>
+            <p>Keyboard interaction allows users to control sprites and trigger events using keyboard keys.</p>
+            
+            <h3>Key Blocks for Keyboard Interaction:</h3>
+            <div class="block-container">
+                <div class="events-block">when [space] key pressed</div>
+                <p>Starts a script when the specified key is pressed.</p>
+                
+                <div class="sensing-block">key [space] pressed?</div>
+                <p>Reports whether a specific key is currently being pressed (true/false).</p>
+            </div>
+            
+            <h3>Example: Simple Character Movement</h3>
+            <div class="block-container">
+                <div class="events-block">when [right arrow] key pressed</div>
+                <div class="motion-block">change x by [10]</div>
+                
+                <div style="margin-top: 10px;"></div>
+                
+                <div class="events-block">when [left arrow] key pressed</div>
+                <div class="motion-block">change x by [-10]</div>
+                
+                <div style="margin-top: 10px;"></div>
+                
+                <div class="events-block">when [up arrow] key pressed</div>
+                <div class="motion-block">change y by [10]</div>
+                
+                <div style="margin-top: 10px;"></div>
+                
+                <div class="events-block">when [down arrow] key pressed</div>
+                <div class="motion-block">change y by [-10]</div>
+            </div>
+            
+            <p>This example creates a character that can be moved in four directions using the arrow keys.</p>
+            
+            <h3>Example: Continuous Movement with Key Sensing</h3>
+            <div class="block-container">
+                <div class="events-block">when green flag clicked</div>
+                <div class="control-block">forever</div>
+                <div style="margin-left: 20px;">
+                    <div class="control-block">if &lt;<div class="sensing-block">key [right arrow] pressed?</div>&gt; then</div>
+                    <div style="margin-left: 20px;">
+                        <div class="motion-block">change x by [5]</div>
+                    </div>
+                    <div class="control-block">if &lt;<div class="sensing-block">key [left arrow] pressed?</div>&gt; then</div>
+                    <div style="margin-left: 20px;">
+                        <div class="motion-block">change x by [-5]</div>
+                    </div>
+                </div>
+            </div>
+            
+            <p>This approach creates smoother, continuous movement by checking key states in a loop rather than using separate event handlers.</p>
+        </section>
+
+        <section class="section">
+            <h2>Mouse Interaction</h2>
+            <p>Mouse interaction allows users to control projects using mouse movements and clicks.</p>
+            
+            <h3>Key Blocks for Mouse Interaction:</h3>
+            <div class="block-container">
+                <div class="events-block">when this sprite clicked</div>
+                <p>Starts a script when the sprite is clicked.</p>
+                
+                <div class="sensing-block">mouse down?</div>
+                <p>Reports whether the mouse button is currently pressed (true/false).</p>
+                
+                <div class="sensing-block">mouse x</div>
+                <div class="sensing-block">mouse y</div>
+                <p>Report the current x and y coordinates of the mouse pointer.</p>
+                
+                <div class="sensing-block">touching [mouse-pointer]?</div>
+                <p>Reports whether the sprite is touching the mouse pointer (true/false).</p>
+                
+                <div class="motion-block">point towards [mouse-pointer]</div>
+                <p>Makes the sprite point in the direction of the mouse pointer.</p>
+                
+                <div class="motion-block">go to [mouse-pointer]</div>
+                <p>Moves the sprite to the position of the mouse pointer.</p>
+            </div>
+            
+            <h3>Example: Drag and Drop</h3>
+            <div class="block-container">
+                <div class="events-block">when green flag clicked</div>
+                <div class="control-block">forever</div>
+                <div style="margin-left: 20px;">
+                    <div class="control-block">if &lt;<div class="sensing-block">mouse down?</div> and <div class="sensing-block">touching [mouse-pointer]?</div>&gt; then</div>
+                    <div style="margin-left: 20px;">
+                        <div class="motion-block">go to [mouse-pointer]</div>
+                    </div>
+                </div>
+            </div>
+            
+            <p>This script allows the user to drag a sprite around the stage by clicking and holding on it.</p>
+            
+            <h3>Example: Interactive Button</h3>
+            <div class="block-container">
+                <div class="events-block">when this sprite clicked</div>
+                <div class="looks-block">switch costume to [button-pressed]</div>
+                <div class="control-block">wait [0.2] seconds</div>
+                <div class="looks-block">switch costume to [button-normal]</div>
+                <div class="events-block">broadcast [button-clicked]</div>
+            </div>
+            
+            <p>This example creates a button that visually responds when clicked and broadcasts a message that can trigger actions in other sprites.</p>
+        </section>
+
+        <section class="section">
+            <h2>User Input with Ask and Answer</h2>
+            <p>The "ask and answer" blocks allow your projects to prompt users for text input and use their responses.</p>
+            
+            <div class="block-container">
+                <div class="sensing-block">ask [What's your name?] and wait</div>
+                <p>Displays a text prompt and waits for the user to type a response.</p>
+                
+                <div class="sensing-block">answer</div>
+                <p>Reports the user's most recent answer.</p>
+            </div>
+            
+            <h3>Example: Personalized Greeting</h3>
+            <div class="block-container">
+                <div class="events-block">when green flag clicked</div>
+                <div class="sensing-block">ask [What's your name?] and wait</div>
+                <div class="looks-block">say [Hello, ] <div class="operators-block">join [Hello, ] [answer]</div> [!] for [2] seconds</div>
+            </div>
+            
+            <p>This script asks for the user's name and then displays a personalized greeting.</p>
+            
+            <h3>Example: Simple Quiz</h3>
+            <div class="block-container">
+                <div class="events-block">when green flag clicked</div>
+                <div class="sensing-block">ask [What is 5 + 3?] and wait</div>
+                <div class="control-block">if &lt;<div class="operators-block">[answer] = [8]</div>&gt; then</div>
+                <div style="margin-left: 20px;">
+                    <div class="looks-block">say [Correct!] for [2] seconds</div>
+                </div>
+                <div class="control-block">else</div>
+                <div style="margin-left: 20px;">
+                    <div class="looks-block">say [Sorry, the answer is 8.] for [2] seconds</div>
+                </div>
+            </div>
+            
+            <p>This example creates a simple math quiz that checks the user's answer and provides feedback.</p>
+        </section>
+
+        <section class="section">
+            <h2>Creating Interactive Stories</h2>
+            <p>Interactive stories allow users to influence the narrative through their choices and actions.</p>
+            
+            <h3>Key Elements of Interactive Stories:</h3>
+            <ul>
+                <li><strong>Branching Narratives</strong>: Different paths based on user choices</li>
+                <li><strong>Character Dialogue</strong>: Text displayed using say/think blocks</li>
+                <li><strong>Scene Changes</strong>: Switching backdrops to represent different locations</li>
+                <li><strong>User Choices</strong>: Allowing users to make decisions that affect the story</li>
+            </ul>
+            
+            <h3>Example: Simple Branching Story</h3>
+            <div class="block-container">
+                <div class="events-block">when green flag clicked</div>
+                <div class="looks-block">switch backdrop to [forest]</div>
+                <div class="looks-block">say [You're lost in a forest. Do you go left or right?] for [4] seconds</div>
+                <div class="sensing-block">ask [Type "left" or "right"] and wait</div>
+                <div class="control-block">if &lt;<div class="operators-block">[answer] = [left]</div>&gt; then</div>
+                <div style="margin-left: 20px;">
+                    <div class="looks-block">switch backdrop to [cave]</div>
+                    <div class="looks-block">say [You found a mysterious cave...] for [3] seconds</div>
+                </div>
+                <div class="control-block">else</div>
+                <div style="margin-left: 20px;">
+                    <div class="looks-block">switch backdrop to [river]</div>
+                    <div class="looks-block">say [You arrived at a flowing river...] for [3] seconds</div>
+                </div>
+            </div>
+            
+            <p>This example creates a simple interactive story where the user's choice determines which path the story takes.</p>
+        </section>
+
+        <section class="section">
+            <h2>Game Mechanics</h2>
+            <p>Game mechanics are the rules and systems that create engaging gameplay experiences.</p>
+            
+            <h3>Common Game Mechanics in Scratch:</h3>
+            <ul>
+                <li><strong>Scoring</strong>: Keeping track of points or achievements</li>
+                <li><strong>Lives/Health</strong>: Managing player status and game over conditions</li>
+                <li><strong>Timers</strong>: Creating time pressure or measuring performance</li>
+                <li><strong>Collision Detection</strong>: Detecting when sprites touch each other or specific colors</li>
+                <li><strong>Movement Patterns</strong>: Creating predictable or random movement for game elements</li>
+                <li><strong>Levels</strong>: Increasing difficulty or changing environments as the game progresses</li>
+            </ul>
+            
+            <h3>Example: Simple Collecting Game</h3>
+            <div class="block-container">
+                <div class="events-block">when green flag clicked</div>
+                <div class="variables-block">set [score] to [0]</div>
+                <div class="control-block">forever</div>
+                <div style="margin-left: 20px;">
+                    <div class="motion-block">go to x: [pick random [-240] to [240]] y: [pick random [-180] to [180]]</div>
+                    <div class="control-block">wait [1] seconds</div>
+                </div>
+                
+                <div style="margin-top: 10px;"></div>
+                
+                <div class="events-block">when green flag clicked</div>
+                <div class="control-block">forever</div>
+                <div style="margin-left: 20px;">
+                    <div class="control-block">if &lt;<div class="sensing-block">touching [Player]?</div>&gt; then</div>
+                    <div style="margin-left: 20px;">
+                        <div class="variables-block">change [score] by [1]</div>
+                        <div class="motion-block">go to x: [pick random [-240] to [240]] y: [pick random [-180] to [180]]</div>
+                        <div class="looks-block">play sound [collect]</div>
+                    </div>
+                </div>
+            </div>
+            
+            <p>This example creates a simple game where a collectible item (this sprite) appears in random locations, and the player earns points by touching it.</p>
+            
+            <h3>Example: Timer and Game Over</h3>
+            <div class="block-container">
+                <div class="events-block">when green flag clicked</div>
+                <div class="variables-block">set [time] to [30]</div>
+                <div class="control-block">repeat until &lt;<div class="operators-block">[time] = [0]</div>&gt;</div>
+                <div style="margin-left: 20px;">
+                    <div class="control-block">wait [1] seconds</div>
+                    <div class="variables-block">change [time] by [-1]</div>
+                </div>
+                <div class="looks-block">say [Game Over!] for [2] seconds</div>
+                <div class="looks-block">stop [all]</div>
+            </div>
+            
+            <p>This script creates a countdown timer and ends the game when time runs out.</p>
+        </section>
+
+        <section class="section">
+            <h2>Creating Effective User Interfaces</h2>
+            <p>A good user interface (UI) makes your project intuitive and enjoyable to use.</p>
+            
+            <h3>UI Design Tips for Scratch Projects:</h3>
+            <ul>
+                <li><strong>Clear Instructions</strong>: Tell users how to interact with your project</li>
+                <li><strong>Visual Feedback</strong>: Provide visual cues when users take actions</li>
+                <li><strong>Consistent Controls</strong>: Use similar interaction patterns throughout your project</li>
+                <li><strong>Readable Text</strong>: Ensure text is large enough and contrasts with the background</li>
+                <li><strong>Intuitive Layout</strong>: Organize elements in a logical way</li>
+            </ul>
+            
+            <h3>Example: Start Screen with Instructions</h3>
+            <div class="block-container">
+                <div class="events-block">when green flag clicked</div>
+                <div class="looks-block">switch backdrop to [title-screen]</div>
+                <div class="looks-block">show</div>
+                <div class="control-block">wait until &lt;<div class="sensing-block">this sprite clicked</div>&gt;</div>
+                <div class="looks-block">switch backdrop to [game-screen]</div>
+                <div class="looks-block">hide</div>
+                <div class="events-block">broadcast [start game]</div>
+            </div>
+            
+            <p>This script creates a start screen that waits for the user to click before beginning the game.</p>
+            
+            <div class="example-project">
+                <h3>Next Steps</h3>
+                <p>Now that you understand how to create interactive projects in Scratch, let's explore how to apply these skills to STEM education.</p>
+                <p><a href="section7.html">Continue to Section 7: STEM Applications with Scratch →</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Based on resources from the <a href="https://en.scratch-wiki.info/" target="_blank">Scratch Wiki platform</a>.</p>
+        <p>&copy; 2025 Introduction to Programming with Scratch - A STEM Education Course</p>
+    </footer>
+</body>
+</html>

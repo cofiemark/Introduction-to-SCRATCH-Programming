@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding Block Categories - Programming with Scratch</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Understanding Block Categories</h1>
+        <p>Section 3: The Building Blocks of Scratch Programming</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="section1.html">Introduction</a></li>
+            <li><a href="section2.html">Getting Started</a></li>
+            <li><a href="section3.html">Block Categories</a></li>
+            <li><a href="section4.html">Programming Fundamentals</a></li>
+            <li><a href="section5.html">Sprites & Costumes</a></li>
+            <li><a href="section6.html">Interactive Projects</a></li>
+            <li><a href="section7.html">STEM Applications</a></li>
+            <li><a href="section8.html">Example Projects</a></li>
+            <li><a href="section9.html">Advanced Features</a></li>
+            <li><a href="section10.html">Assessment</a></li>
+            <li><a href="section11.html">Resources</a></li>
+            <li><a href="exercises.html">Exercises</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="section">
+            <h2>Overview of Block Categories</h2>
+            <p>Scratch organizes its programming blocks into categories, each with a distinct color and purpose. This organization helps users quickly find the blocks they need and understand their function.</p>
+            
+            <div class="example-project">
+                <img src="https://en.scratch-wiki.info/w/images/Block_palette.png" alt="Scratch Block Categories">
+                <p class="image-caption">The block palette showing different categories of blocks</p>
+            </div>
+            
+            <p>The main block categories in Scratch 3.0 are:</p>
+            
+            <ul>
+                <li><strong style="color: var(--scratch-blue);">Motion</strong> (Blue): Control sprite movement and position</li>
+                <li><strong style="color: var(--scratch-purple);">Looks</strong> (Purple): Change appearance and visibility</li>
+                <li><strong style="color: #FF8C1A;">Sound</strong> (Pink): Play and control audio</li>
+                <li><strong style="color: #FFBF00;">Events</strong> (Yellow): Respond to triggers and start scripts</li>
+                <li><strong style="color: var(--scratch-orange);">Control</strong> (Orange): Manage script flow with loops and conditionals</li>
+                <li><strong style="color: #5CB1D6;">Sensing</strong> (Light Blue): Detect conditions and get input</li>
+                <li><strong style="color: var(--scratch-green);">Operators</strong> (Green): Perform mathematical and logical operations</li>
+                <li><strong style="color: #FF8C1A;">Variables</strong> (Orange/Red): Store and retrieve data</li>
+                <li><strong style="color: #FF6680;">My Blocks</strong> (Pink/Red): Create custom blocks</li>
+            </ul>
+            
+            <p>Additional categories may appear when extensions are added to a project.</p>
+        </section>
+
+        <section class="section">
+            <h2>Motion Blocks</h2>
+            <p>Motion blocks control how sprites move around the stage. They are colored blue and are among the most commonly used blocks in Scratch.</p>
+            
+            <div class="example-project">
+                <img src="https://en.scratch-wiki.info/w/images/Motion_blocks.png" alt="Motion Blocks">
+                <p class="image-caption">The Motion blocks category</p>
+            </div>
+            
+            <h3>Key Motion Blocks:</h3>
+            
+            <div class="block-container">
+                <div class="motion-block">move [10] steps</div>
+                <p>Moves the sprite forward in its current direction by the specified number of steps (pixels).</p>
+                
+                <div class="motion-block">turn right [15] degrees</div>
+                <div class="motion-block">turn left [15] degrees</div>
+                <p>Rotates the sprite clockwise or counterclockwise by the specified angle.</p>
+                
+                <div class="motion-block">go to x: [0] y: [0]</div>
+                <p>Moves the sprite to the specified coordinates on the stage.</p>
+                
+                <div class="motion-block">glide [1] secs to x: [0] y: [0]</div>
+                <p>Moves the sprite smoothly to the specified coordinates over the given time period.</p>
+                
+                <div class="motion-block">point in direction [90]</div>
+                <p>Sets the sprite's direction (0 = up, 90 = right, 180 = down, 270 = left).</p>
+                
+                <div class="motion-block">point towards [mouse-pointer]</div>
+                <p>Makes the sprite face toward the mouse pointer or another sprite.</p>
+                
+                <div class="motion-block">if on edge, bounce</div>
+                <p>Makes the sprite bounce when it hits the edge of the stage.</p>
+            </div>
+            
+            <p>Motion blocks are essential for creating animations, games, and interactive stories where characters need to move around the stage.</p>
+        </section>
+
+        <section class="section">
+            <h2>Looks Blocks</h2>
+            <p>Looks blocks control the appearance of sprites. They are colored purple and allow you to change costumes, create speech bubbles, apply visual effects, and control size and visibility.</p>
+            
+            <div class="example-project">
+                <img src="https://en.scratch-wiki.info/w/images/Looks_blocks.png" alt="Looks Blocks">
+                <p class="image-caption">The Looks blocks category</p>
+            </div>
+            
+            <h3>Key Looks Blocks:</h3>
+            
+            <div class="block-container">
+                <div class="looks-block">say [Hello!] for [2] seconds</div>
+                <div class="looks-block">say [Hello!]</div>
+                <p>Creates a speech bubble with the specified text, either temporarily or until changed.</p>
+                
+                <div class="looks-block">think [Hmm...] for [2] seconds</div>
+                <div class="looks-block">think [Hmm...]</div>
+                <p>Creates a thought bubble with the specified text.</p>
+                
+                <div class="looks-block">switch costume to [costume2]</div>
+                <div class="looks-block">next costume</div>
+                <p>Changes the sprite's appearance by switching costumes.</p>
+                
+                <div class="looks-block">switch backdrop to [backdrop1]</div>
+                <div class="looks-block">next backdrop</div>
+                <p>Changes the stage's background.</p>
+                
+                <div class="looks-block">change size by [10]</div>
+                <div class="looks-block">set size to [100]%</div>
+                <p>Adjusts the sprite's size.</p>
+                
+                <div class="looks-block">change [color] effect by [25]</div>
+                <div class="looks-block">set [color] effect to [0]</div>
+                <p>Applies visual effects like color, fisheye, whirl, etc.</p>
+                
+                <div class="looks-block">clear graphic effects</div>
+                <p>Removes all visual effects from the sprite.</p>
+                
+                <div class="looks-block">show</div>
+                <div class="looks-block">hide</div>
+                <p>Controls the sprite's visibility.</p>
+            </div>
+            
+            <p>Looks blocks are crucial for creating visual feedback, character dialogue, and visual transformations in projects.</p>
+        </section>
+
+        <section class="section">
+            <h2>Sound Blocks</h2>
+            <p>Sound blocks control audio playback and effects. They are colored pink and allow you to play sounds, adjust volume, and create music.</p>
+            
+            <div class="example-project">
+                <img src="https://en.scratch-wiki.info/w/images/Sound_blocks.png" alt="Sound Blocks">
+                <p class="image-caption">The Sound blocks category</p>
+            </div>
+            
+            <h3>Key Sound Blocks:</h3>
+            
+            <div class="block-container">
+                <div class="looks-block" style="background-color: #FF8C1A;">play sound [meow] until done</div>
+                <p>Plays the selected sound and waits for it to finish before continuing the script.</p>
+                
+                <div class="looks-block" style="background-color: #FF8C1A;">start sound [meow]</div>
+                <p>Starts playing the sound but immediately continues the script without waiting.</p>
+                
+                <div class="looks-block" style="background-color: #FF8C1A;">stop all sounds</div>
+                <p>Stops all currently playing sounds.</p>
+                
+                <div class="looks-block" style="background-color: #FF8C1A;">change [pitch] effect by [10]</div>
+                <div class="looks-block" style="background-color: #FF8C1A;">set [pitch] effect to [100]</div>
+                <p>Adjusts sound effects like pitch, pan, or echo.</p>
+                
+                <div class="looks-block" style="background-color: #FF8C1A;">clear sound effects</div>
+                <p>Removes all sound effects.</p>
+                
+                <div class="looks-block" style="background-color: #FF8C1A;">change volume by [-10]</div>
+                <div class="looks-block" style="background-color: #FF8C1A;">set volume to [100]%</div>
+                <p>Controls the volume of sounds.</p>
+                
+                <div class="looks-block" style="background-color: #FF8C1A;">volume</div>
+                <p>Reports the current volume level.</p>
+            </div>
+            
+            <p>Sound blocks enhance projects by adding audio feedback, music, sound effects, and voice recordings.</p>
+        </section>
+
+        <section class="section">
+            <h2>Events Blocks</h2>
+            <p>Events blocks trigger scripts based on specific occurrences. They are colored yellow and typically appear at the top of scripts as starting points.</p>
+            
+            <div class="example-project">
+                <img src="https://en.scratch-wiki.info/w/images/Events_blocks.png" alt="Events Blocks">
+                <p class="image-caption">The Events blocks category</p>
+            </div>
+            
+            <h3>Key Events Blocks:</h3>
+            
+            <div class="block-container">
+                <div class="events-block">when green flag clicked</div>
+                <p>Starts the script when the green flag button is clicked.</p>
+                
+                <div class="events-block">when [space] key pressed</div>
+                <p>Starts the script when the specified key is pressed.</p>
+                
+                <div class="events-block">when this sprite clicked</div>
+                <p>Starts the script when the sprite is clicked.</p>
+                
+                <div class="events-block">when backdrop switches to [backdrop1]</div>
+                <p>Starts the script when the backdrop changes to the specified one.</p>
+                
+                <div class="events-block">when [loudness] > [10]</div>
+                <p>Starts the script when a sensor value exceeds the threshold.</p>
+                
+                <div class="events-block">when I receive [message1]</div>
+                <p>Starts the script when the specified broadcast message is received.</p>
+                
+                <div class="events-block">broadcast [message1]</div>
+                <div class="events-block">broadcast [message1] and wait</div>
+                <p>Sends a message to all sprites, triggering "when I receive" scripts.</p>
+            </div>
+            
+            <p>Events blocks are fundamental to making projects interactive, allowing them to respond to user input and other triggers.</p>
+        </section>
+
+        <section class="section">
+            <h2>Control Blocks</h2>
+            <p>Control blocks manage the flow of scripts. They are colored orange and include loops, conditionals, and timing controls.</p>
+            
+            <div class="example-project">
+                <img src="https://en.scratch-wiki.info/w/images/Control_blocks.png" alt="Control Blocks">
+                <p class="image-caption">The Control blocks category</p>
+            </div>
+            
+            <h3>Key Control Blocks:</h3>
+            
+            <div class="block-container">
+                <div class="control-block">wait [1] seconds</div>
+                <p>Pauses the script for the specified number of seconds.</p>
+                
+                <div class="control-block">repeat [10]</div>
+                <p>Runs the enclosed blocks a specific number of times.</p>
+                
+                <div class="control-block">forever</div>
+                <p>Continuously runs the enclosed blocks until the script is stopped.</p>
+                
+                <div class="control-block">if &lt;&gt; then</div>
+                <p>Runs the enclosed blocks only if the condition is true.</p>
+                
+                <div class="control-block">if &lt;&gt; then ... else</div>
+                <p>Runs one set of blocks if the condition is true, another set if false.</p>
+                
+                <div class="control-block">wait until &lt;&gt;</div>
+                <p>Pauses the script until the condition becomes true.</p>
+                
+                <div class="control-block">repeat until &lt;&gt;</div>
+                <p>Repeats the enclosed blocks until the condition becomes true.</p>
+                
+                <div class="control-block">stop [all]</div>
+                <p>Stops scripts (all scripts, this script, or other scripts in sprite).</p>
+                
+                <div class="control-block">when I start as a clone</div>
+                <p>Starts the script when a clone of the sprite is created.</p>
+                
+                <div class="control-block">create clone of [myself]</div>
+                <p>Creates a duplicate of the specified sprite.</p>
+                
+                <div class="control-block">delete this clone</div>
+                <p>Removes the current clone.</p>
+            </div>
+            
+            <p>Control blocks are essential for creating complex behaviors, managing timing, and implementing game logic.</p>
+        </section>
+
+        <section class="section">
+            <h2>Sensing Blocks</h2>
+            <p>Sensing blocks detect conditions and gather input. They are colored light blue and provide information about the environment and user interactions.</p>
+            
+            <div class="example-project">
+                <img src="https://en.scratch-wiki.info/w/images/Sensing_blocks.png" alt="Sensing Blocks">
+                <p class="image-caption">The Sensing blocks category</p>
+            </div>
+            
+            <h3>Key Sensing Blocks:</h3>
+            
+            <div class="block-container">
+                <div class="sensing-block">touching [edge]?</div>
+                <div class="sensing-block">touching [Sprite2]?</div>
+                <p>Detects if the sprite is touching the edge, another sprite, or a color.</p>
+                
+                <div class="sensing-block">touching color [#FF0000]?</div>
+                <div class="sensing-block">color [#FF0000] is touching [#0000FF]?</div>
+                <p>Detects color collisions.</p>
+                
+                <div class="sensing-block">distance to [mouse-pointer]</div>
+                <p>Reports the distance to the mouse pointer or another sprite.</p>
+                
+                <div class="sensing-block">ask [What's your name?] and wait</div>
+                <p>Prompts the user for input and waits for a response.</p>
+                
+                <div class="sensing-block">answer</div>
+                <p>Reports the user's most recent answer.</p>
+                
+                <div class="sensing-block">key [space] pressed?</div>
+                <div class="sensing-block">mouse down?</div>
+                <p>Detects keyboard and mouse input.</p>
+                
+                <div class="sensing-block">mouse x</div>
+                <div class="sensing-block">mouse y</div>
+                <p>Reports the current mouse coordinates.</p>
+                
+                <div class="sensing-block">loudness</div>
+                <p>Reports the volume level from the microphone.</p>
+                
+                <div class="sensing-block">timer</div>
+                <div class="sensing-block">reset timer</div>
+                <p>Measures elapsed time.</p>
+                
+                <div class="sensing-block">current [year]</div>
+                <p>Reports date and time information.</p>
+            </div>
+            
+            <p>Sensing blocks are crucial for creating interactive projects that respond to user actions and environmental conditions.</p>
+        </section>
+
+        <section class="section">
+            <h2>Operators Blocks</h2>
+            <p>Operators blocks perform mathematical and logical operations. They are colored green and help with calculations, text manipulation, and comparisons.</p>
+            
+            <div class="example-project">
+                <img src="https://en.scratch-wiki.info/w/images/Operators_blocks.png" alt="Operators Blocks">
+                <p class="image-caption">The Operators blocks category</p>
+            </div>
+            
+            <h3>Key Operators Blocks:</h3>
+            
+            <div class="block-container">
+                <div class="operators-block">[3] + [4]</div>
+                <div class="operators-block">[8] - [2]</div>
+                <div class="operators-block">[3] * [4]</div>
+                <div class="operators-block">[8] / [2]</div>
+                <p>Perform basic arithmetic operations.</p>
+                
+                <div class="operators-block">pick random [1] to [10]</div>
+                <p>Generates a random number within the specified range.</p>
+                
+                <div class="operators-block">&lt;[10] < [20]&gt;</div>
+                <div class="operators-block">&lt;[10] = [10]&gt;</div>
+                <div class="operators-block">&lt;[10] > [5]&gt;</div>
+                <p>Compare values and return true or false.</p>
+                
+                <div class="operators-block">&lt;&lt;[10] < [20]&gt; and &lt;[5] > [2]&gt;&gt;</div>
+                <div class="operators-block">&lt;&lt;[10] < [20]&gt; or &lt;[5] < [2]&gt;&gt;</div>
+                <div class="operators-block">&lt;not &lt;[10] < [20]&gt;&gt;</div>
+                <p>Perform logical operations (AND, OR, NOT).</p>
+                
+                <div class="operators-block">join [hello ] [world]</div>
+                <p>Combines text strings.</p>
+                
+                <div class="operators-block">letter [1] of [world]</div>
+                <p>Reports a specific character from a text string.</p>
+                
+                <div class="operators-block">length of [hello world]</div>
+                <p>Reports the number of characters in a text string.</p>
+                
+                <div class="operators-block">[9] mod [4]</div>
+                <p>Reports the remainder when dividing the first number by the second.</p>
+                
+                <div class="operators-block">round [3.14]</div>
+                <p>Rounds a number to the nearest integer.</p>
+                
+                <div class="operators-block">[abs] of [-5]</div>
+                <div class="operators-block">[sqrt] of [16]</div>
+                <p>Perform mathematical functions.</p>
+            </div>
+            
+            <p>Operators blocks are essential for calculations, decision-making, and text manipulation in projects.</p>
+        </section>
+
+        <section class="section">
+            <h2>Variables Blocks</h2>
+            <p>Variables blocks allow you to create, store, and manipulate data. They are colored orange/red and include both variables and lists.</p>
+            
+            <div class="example-project">
+                <img src="https://en.scratch-wiki.info/w/images/Variables_blocks.png" alt="Variables Blocks">
+                <p class="image-caption">The Variables blocks category</p>
+            </div>
+            
+            <h3>Key Variables Blocks:</h3>
+            
+            <div class="block-container">
+                <div class="variables-block">set [my variable] to [0]</div>
+                <p>Assigns a value to a variable.</p>
+                
+                <div class="variables-block">change [my variable] by [1]</div>
+                <p>Increases or decreases a variable's value.</p>
+                
+                <div class="variables-block">show variable [my variable]</div>
+                <div class="variables-block">hide variable [my variable]</div>
+                <p>Controls the visibility of a variable monitor on the stage.</p>
+                
+                <div class="variables-block">add [thing] to [my list]</div>
+                <p>Adds an item to the end of a list.</p>
+                
+                <div class="variables-block">delete [1] of [my list]</div>
+                <p>Removes an item from a list.</p>
+                
+                <div class="variables-block">insert [thing] at [1] of [my list]</div>
+                <p>Adds an item at a specific position in a list.</p>
+                
+                <div class="variables-block">replace item [1] of [my list] with [thing]</div>
+                <p>Changes an item in a list.</p>
+                
+                <div class="variables-block">item [1] of [my list]</div>
+                <p>Reports the value of a specific item in a list.</p>
+                
+                <div class="variables-block">length of [my list]</div>
+                <p>Reports the number of items in a list.</p>
+                
+                <div class="variables-block">[my list] contains [thing]?</div>
+                <p>Checks if a specific item is in a list.</p>
+            </div>
+            
+            <p>Variables blocks are crucial for creating games with scores, simulations with changing values, and any project that needs to store and track data.</p>
+        </section>
+
+        <section class="section">
+            <h2>My Blocks (Custom Blocks)</h2>
+            <p>My Blocks allow you to create your own reusable blocks. They are colored pink/red and help organize code and create abstractions.</p>
+            
+            <div class="example-project">
+                <img src="https://en.scratch-wiki.info/w/images/My_blocks.png" alt="My Blocks">
+                <p class="image-caption">The My Blocks category</p>
+            </div>
+            
+            <h3>Creating Custom Blocks:</h3>
+            
+            <ol>
+                <li>Click "Make a Block" in the My Blocks category</li>
+                <li>Name your block and optionally add parameters</li>
+                <li>Define what the block does by attaching other blocks to the "define" block</li>
+            </ol>
+            
+            <div class="block-container">
+                <div class="my-blocks-block">define [draw square [size]]</div>
+                <p>Creates a new custom block, potentially with parameters.</p>
+            </div>
+            
+            <p>Custom blocks are powerful for:</p>
+            <ul>
+                <li>Breaking down complex scripts into manageable parts</li>
+                <li>Reusing code in multiple places</li>
+                <li>Creating higher-level abstractions</li>
+                <li>Making scripts more readable and maintainable</li>
+            </ul>
+            
+            <div class="example-project">
+                <h3>Next Steps</h3>
+                <p>Now that you understand the different types of blocks available in Scratch, let's explore how to use them to implement fundamental programming concepts.</p>
+                <p><a href="section4.html">Continue to Section 4: Programming Fundamentals with Scratch →</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Based on resources from the <a href="https://en.scratch-wiki.info/" target="_blank">Scratch Wiki platform</a>.</p>
+        <p>&copy; 2025 Introduction to Programming with Scratch - A STEM Education Course</p>
+    </footer>
+</body>
+</html>

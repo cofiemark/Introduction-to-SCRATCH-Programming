@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming Fundamentals with Scratch - Programming with Scratch</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Programming Fundamentals with Scratch</h1>
+        <p>Section 4: Core Programming Concepts</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="section1.html">Introduction</a></li>
+            <li><a href="section2.html">Getting Started</a></li>
+            <li><a href="section3.html">Block Categories</a></li>
+            <li><a href="section4.html">Programming Fundamentals</a></li>
+            <li><a href="section5.html">Sprites & Costumes</a></li>
+            <li><a href="section6.html">Interactive Projects</a></li>
+            <li><a href="section7.html">STEM Applications</a></li>
+            <li><a href="section8.html">Example Projects</a></li>
+            <li><a href="section9.html">Advanced Features</a></li>
+            <li><a href="section10.html">Assessment</a></li>
+            <li><a href="section11.html">Resources</a></li>
+            <li><a href="exercises.html">Exercises</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="section">
+            <h2>Computational Thinking with Scratch</h2>
+            <p>Scratch is designed to develop computational thinking skills, which are valuable across all STEM disciplines. These skills include:</p>
+            
+            <ul>
+                <li><strong>Decomposition</strong>: Breaking down complex problems into smaller, manageable parts</li>
+                <li><strong>Pattern Recognition</strong>: Identifying similarities or patterns among different problems</li>
+                <li><strong>Abstraction</strong>: Focusing on important information while ignoring irrelevant details</li>
+                <li><strong>Algorithmic Thinking</strong>: Developing step-by-step solutions to problems</li>
+            </ul>
+            
+            <p>In this section, we'll explore how Scratch implements fundamental programming concepts that support computational thinking.</p>
+        </section>
+
+        <section class="section">
+            <h2>Algorithms and Sequencing</h2>
+            <p>An algorithm is a step-by-step procedure for solving a problem or accomplishing a task. In Scratch, algorithms are created by connecting blocks in a specific order.</p>
+            
+            <h3>Key Concepts:</h3>
+            <ul>
+                <li><strong>Sequence</strong>: The order in which instructions are executed</li>
+                <li><strong>Precision</strong>: Instructions must be clear and unambiguous</li>
+                <li><strong>Determinism</strong>: The same input should produce the same output</li>
+            </ul>
+            
+            <div class="block-container">
+                <h4>Example: Drawing a Square</h4>
+                <div class="events-block">when green flag clicked</div>
+                <div class="motion-block">pen down</div>
+                <div class="motion-block">move [100] steps</div>
+                <div class="motion-block">turn right [90] degrees</div>
+                <div class="motion-block">move [100] steps</div>
+                <div class="motion-block">turn right [90] degrees</div>
+                <div class="motion-block">move [100] steps</div>
+                <div class="motion-block">turn right [90] degrees</div>
+                <div class="motion-block">move [100] steps</div>
+                <div class="motion-block">turn right [90] degrees</div>
+                <div class="motion-block">pen up</div>
+            </div>
+            
+            <p>This algorithm demonstrates sequencing - each instruction is executed in order from top to bottom. The precision of the instructions (exact number of steps and degrees) ensures the square is drawn correctly.</p>
+        </section>
+
+        <section class="section">
+            <h2>Loops</h2>
+            <p>Loops allow a sequence of instructions to be repeated multiple times. They are essential for reducing repetition in code and making it more efficient.</p>
+            
+            <h3>Types of Loops in Scratch:</h3>
+            <ul>
+                <li><strong>Repeat</strong>: Executes blocks a specific number of times</li>
+                <li><strong>Forever</strong>: Continuously executes blocks until the script is stopped</li>
+                <li><strong>Repeat Until</strong>: Repeats blocks until a condition becomes true</li>
+            </ul>
+            
+            <div class="block-container">
+                <h4>Example: Drawing a Square with a Loop</h4>
+                <div class="events-block">when green flag clicked</div>
+                <div class="motion-block">pen down</div>
+                <div class="control-block">repeat [4]</div>
+                <div style="margin-left: 20px;">
+                    <div class="motion-block">move [100] steps</div>
+                    <div class="motion-block">turn right [90] degrees</div>
+                </div>
+                <div class="motion-block">pen up</div>
+            </div>
+            
+            <p>This improved algorithm uses a loop to repeat the "move and turn" sequence four times, making the code more concise and easier to understand.</p>
+            
+            <div class="block-container">
+                <h4>Example: Continuous Animation with Forever Loop</h4>
+                <div class="events-block">when green flag clicked</div>
+                <div class="control-block">forever</div>
+                <div style="margin-left: 20px;">
+                    <div class="motion-block">move [10] steps</div>
+                    <div class="control-block">if on edge, bounce</div>
+                    <div class="looks-block">next costume</div>
+                    <div class="control-block">wait [0.1] seconds</div>
+                </div>
+            </div>
+            
+            <p>This script creates continuous movement and animation using a forever loop, which runs indefinitely until the project is stopped.</p>
+        </section>
+
+        <section class="section">
+            <h2>Conditionals</h2>
+            <p>Conditionals allow scripts to make decisions based on whether certain conditions are true or false. They enable programs to respond differently in different situations.</p>
+            
+            <h3>Types of Conditionals in Scratch:</h3>
+            <ul>
+                <li><strong>If</strong>: Executes blocks only if a condition is true</li>
+                <li><strong>If-Else</strong>: Executes one set of blocks if a condition is true, another set if false</li>
+                <li><strong>Wait Until</strong>: Pauses execution until a condition becomes true</li>
+            </ul>
+            
+            <div class="block-container">
+                <h4>Example: Simple If Statement</h4>
+                <div class="events-block">when green flag clicked</div>
+                <div class="control-block">forever</div>
+                <div style="margin-left: 20px;">
+                    <div class="control-block">if &lt;<div class="sensing-block">touching [mouse-pointer]?</div>&gt; then</div>
+                    <div style="margin-left: 20px;">
+                        <div class="looks-block">say [Hello!] for [2] seconds</div>
+                    </div>
+                </div>
+            </div>
+            
+            <p>This script checks if the sprite is touching the mouse pointer. If true, it says "Hello!" for 2 seconds.</p>
+            
+            <div class="block-container">
+                <h4>Example: If-Else Statement</h4>
+                <div class="events-block">when green flag clicked</div>
+                <div class="control-block">forever</div>
+                <div style="margin-left: 20px;">
+                    <div class="control-block">if &lt;<div class="sensing-block">key [space] pressed?</div>&gt; then</div>
+                    <div style="margin-left: 20px;">
+                        <div class="motion-block">change y by [10]</div>
+                    </div>
+                    <div class="control-block">else</div>
+                    <div style="margin-left: 20px;">
+                        <div class="motion-block">change y by [-5]</div>
+                    </div>
+                </div>
+            </div>
+            
+            <p>This script moves the sprite up when the space key is pressed and down when it's not, creating a simple jumping mechanism with gravity.</p>
+        </section>
+
+        <section class="section">
+            <h2>Variables</h2>
+            <p>Variables store and retrieve data in a program. They are essential for keeping track of information that changes during program execution.</p>
+            
+            <h3>Using Variables in Scratch:</h3>
+            <ul>
+                <li><strong>Creating Variables</strong>: Click "Make a Variable" in the Variables category</li>
+                <li><strong>Scope</strong>: Variables can be for all sprites (global) or just for one sprite (local)</li>
+                <li><strong>Monitoring</strong>: Variables can be displayed on the stage to show their current values</li>
+            </ul>
+            
+            <div class="block-container">
+                <h4>Example: Simple Score Counter</h4>
+                <div class="events-block">when green flag clicked</div>
+                <div class="variables-block">set [score] to [0]</div>
+                <div class="control-block">forever</div>
+                <div style="margin-left: 20px;">
+                    <div class="control-block">if &lt;<div class="sensing-block">touching [Apple]?</div>&gt; then</div>
+                    <div style="margin-left: 20px;">
+                        <div class="variables-block">change [score] by [1]</div>
+                        <div class="control-block">wait [0.5] seconds</div>
+                    </div>
+                </div>
+            </div>
+            
+            <p>This script initializes a score variable to 0 and increases it by 1 whenever the sprite touches another sprite named "Apple".</p>
+            
+            <div class="block-container">
+                <h4>Example: Timer</h4>
+                <div class="events-block">when green flag clicked</div>
+                <div class="variables-block">set [time left] to [30]</div>
+                <div class="control-block">repeat until &lt;<div class="operators-block">[time left] = [0]</div>&gt;</div>
+                <div style="margin-left: 20px;">
+                    <div class="control-block">wait [1] seconds</div>
+                    <div class="variables-block">change [time left] by [-1]</div>
+                </div>
+                <div class="looks-block">say [Time's up!] for [2] seconds</div>
+            </div>
+            
+            <p>This script creates a countdown timer that starts at 30 seconds and counts down to zero, then displays "Time's up!"</p>
+        </section>
+
+        <section class="section">
+            <h2>Events</h2>
+            <p>Events trigger scripts in response to specific occurrences. They are fundamental to creating interactive programs that respond to user input and other triggers.</p>
+            
+            <h3>Common Events in Scratch:</h3>
+            <ul>
+                <li><strong>User Input</strong>: Key presses, mouse clicks, etc.</li>
+                <li><strong>Project Start</strong>: When the green flag is clicked</li>
+                <li><strong>Messages</strong>: When a broadcast is received</li>
+                <li><strong>State Changes</strong>: When a backdrop changes, when a value exceeds a threshold</li>
+            </ul>
+            
+            <div class="block-container">
+                <h4>Example: Multiple Event Handlers</h4>
+                <div class="events-block">when green flag clicked</div>
+                <div class="looks-block">say [Use arrow keys to move me!] for [2] seconds</div>
+                
+                <div style="margin-top: 10px;"></div>
+                
+                <div class="events-block">when [up arrow] key pressed</div>
+                <div class="motion-block">change y by [10]</div>
+                
+                <div style="margin-top: 10px;"></div>
+                
+                <div class="events-block">when [down arrow] key pressed</div>
+                <div class="motion-block">change y by [-10]</div>
+                
+                <div style="margin-top: 10px;"></div>
+                
+                <div class="events-block">when [right arrow] key pressed</div>
+                <div class="motion-block">change x by [10]</div>
+                
+                <div style="margin-top: 10px;"></div>
+                
+                <div class="events-block">when [left arrow] key pressed</div>
+                <div class="motion-block">change x by [-10]</div>
+            </div>
+            
+            <p>This example uses multiple event blocks to create a character that responds to arrow key presses by moving in different directions.</p>
+        </section>
+
+        <section class="section">
+            <h2>Parallelism</h2>
+            <p>Parallelism allows multiple scripts to run simultaneously. This is a powerful concept in Scratch that enables complex behaviors and interactions.</p>
+            
+            <h3>Implementing Parallelism in Scratch:</h3>
+            <ul>
+                <li><strong>Multiple Scripts</strong>: Different scripts can run at the same time</li>
+                <li><strong>Multiple Sprites</strong>: Each sprite can have its own independent scripts</li>
+                <li><strong>Broadcasts</strong>: Messages can trigger multiple scripts across different sprites</li>
+            </ul>
+            
+            <div class="block-container">
+                <h4>Example: Parallel Scripts</h4>
+                <div class="events-block">when green flag clicked</div>
+                <div class="control-block">forever</div>
+                <div style="margin-left: 20px;">
+                    <div class="motion-block">move [10] steps</div>
+                    <div class="control-block">if on edge, bounce</div>
+                </div>
+                
+                <div style="margin-top: 10px;"></div>
+                
+                <div class="events-block">when green flag clicked</div>
+                <div class="control-block">forever</div>
+                <div style="margin-left: 20px;">
+                    <div class="looks-block">next costume</div>
+                    <div class="control-block">wait [0.2] seconds</div>
+                </div>
+            </div>
+            
+            <p>This example has two scripts that run in parallel: one handles movement and bouncing, while the other handles animation by changing costumes.</p>
+            
+            <div class="block-container">
+                <h4>Example: Broadcast and Receive</h4>
+                <div class="events-block">when green flag clicked</div>
+                <div class="control-block">wait [2] seconds</div>
+                <div class="events-block">broadcast [start game]</div>
+                
+                <div style="margin-top: 10px;"></div>
+                
+                <div class="events-block">when I receive [start game]</div>
+                <div class="variables-block">set [score] to [0]</div>
+                <div class="control-block">forever</div>
+                <div style="margin-left: 20px;">
+                    <div class="motion-block">move [5] steps</div>
+                </div>
+            </div>
+            
+            <p>This example uses broadcasting to coordinate between scripts. When the "start game" message is broadcast, it triggers another script to initialize the game and start movement.</p>
+        </section>
+
+        <section class="section">
+            <h2>Debugging in Scratch</h2>
+            <p>Debugging is the process of finding and fixing errors in programs. Scratch provides several features that make debugging easier:</p>
+            
+            <ul>
+                <li><strong>Highlighting</strong>: Active blocks are highlighted as they run</li>
+                <li><strong>Single-stepping</strong>: Click on a script to run it step by step</li>
+                <li><strong>Variable monitors</strong>: Display variable values on the stage</li>
+                <li><strong>Say blocks</strong>: Use say blocks to display values during execution</li>
+            </ul>
+            
+            <h3>Common Debugging Strategies:</h3>
+            <ol>
+                <li>Break down complex scripts into smaller parts</li>
+                <li>Test each part individually</li>
+                <li>Use say blocks to display intermediate values</li>
+                <li>Check conditions in if statements</li>
+                <li>Verify that loops are terminating properly</li>
+            </ol>
+            
+            <div class="example-project">
+                <h3>Next Steps</h3>
+                <p>Now that you understand the fundamental programming concepts in Scratch, let's explore how to work with sprites and costumes to create visual elements for your projects.</p>
+                <p><a href="section5.html">Continue to Section 5: Working with Sprites and Costumes →</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Based on resources from the <a href="https://en.scratch-wiki.info/" target="_blank">Scratch Wiki platform</a>.</p>
+        <p>&copy; 2025 Introduction to Programming with Scratch - A STEM Education Course</p>
+    </footer>
+</body>
+</html>

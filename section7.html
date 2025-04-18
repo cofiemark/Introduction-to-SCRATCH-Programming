@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STEM Applications with Scratch - Programming with Scratch</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>STEM Applications with Scratch</h1>
+        <p>Section 7: Integrating Scratch into STEM Education</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="section1.html">Introduction</a></li>
+            <li><a href="section2.html">Getting Started</a></li>
+            <li><a href="section3.html">Block Categories</a></li>
+            <li><a href="section4.html">Programming Fundamentals</a></li>
+            <li><a href="section5.html">Sprites & Costumes</a></li>
+            <li><a href="section6.html">Interactive Projects</a></li>
+            <li><a href="section7.html">STEM Applications</a></li>
+            <li><a href="section8.html">Example Projects</a></li>
+            <li><a href="section9.html">Advanced Features</a></li>
+            <li><a href="section10.html">Assessment</a></li>
+            <li><a href="section11.html">Resources</a></li>
+            <li><a href="exercises.html">Exercises</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="section">
+            <h2>Scratch as a STEM Learning Tool</h2>
+            <p>Scratch is an excellent platform for teaching STEM (Science, Technology, Engineering, and Mathematics) concepts. It allows students to explore complex ideas through creative programming projects.</p>
+            
+            <h3>Benefits of Using Scratch for STEM Education:</h3>
+            <ul>
+                <li><strong>Engagement</strong>: Makes abstract concepts concrete and interactive</li>
+                <li><strong>Visualization</strong>: Helps students see and manipulate scientific and mathematical concepts</li>
+                <li><strong>Experimentation</strong>: Encourages testing hypotheses and observing results</li>
+                <li><strong>Problem-solving</strong>: Develops critical thinking and analytical skills</li>
+                <li><strong>Integration</strong>: Connects different STEM disciplines in meaningful ways</li>
+                <li><strong>Accessibility</strong>: Makes complex topics approachable for diverse learners</li>
+            </ul>
+            
+            <p>In this section, we'll explore how Scratch can be applied to each area of STEM education.</p>
+        </section>
+
+        <section class="section">
+            <h2>Mathematics Applications</h2>
+            <p>Scratch provides an engaging way to explore mathematical concepts through interactive visualizations and games.</p>
+            
+            <h3>Mathematical Concepts in Scratch:</h3>
+            <ul>
+                <li><strong>Geometry</strong>: Angles, shapes, coordinates, transformations</li>
+                <li><strong>Algebra</strong>: Variables, equations, functions</li>
+                <li><strong>Arithmetic</strong>: Basic operations, order of operations</li>
+                <li><strong>Probability</strong>: Random numbers, chance events</li>
+                <li><strong>Measurement</strong>: Distance, time, angles</li>
+                <li><strong>Data Analysis</strong>: Collecting, visualizing, and interpreting data</li>
+            </ul>
+            
+            <h3>Example: Interactive Coordinate Plane</h3>
+            <div class="block-container">
+                <div class="events-block">when green flag clicked</div>
+                <div class="looks-block">switch backdrop to [coordinate-grid]</div>
+                <div class="variables-block">set [x-coordinate] to [0]</div>
+                <div class="variables-block">set [y-coordinate] to [0]</div>
+                <div class="motion-block">go to x: [0] y: [0]</div>
+                
+                <div style="margin-top: 10px;"></div>
+                
+                <div class="events-block">when this sprite clicked</div>
+                <div class="variables-block">set [x-coordinate] to [mouse x]</div>
+                <div class="variables-block">set [y-coordinate] to [mouse y]</div>
+                <div class="motion-block">go to x: [mouse x] y: [mouse y]</div>
+                <div class="looks-block">say [join [( ] [join [x-coordinate] [join [, ] [join [y-coordinate] [) ]]]]] for [2] seconds</div>
+            </div>
+            
+            <p>This project creates an interactive coordinate plane where students can click to place a point and see its coordinates, helping them understand the Cartesian coordinate system.</p>
+            
+            <h3>Example: Angle Explorer</h3>
+            <div class="block-container">
+                <div class="events-block">when green flag clicked</div>
+                <div class="variables-block">set [angle] to [0]</div>
+                <div class="motion-block">go to x: [0] y: [0]</div>
+                <div class="motion-block">point in direction [90]</div>
+                
+                <div style="margin-top: 10px;"></div>
+                
+                <div class="events-block">when [right arrow] key pressed</div>
+                <div class="variables-block">change [angle] by [10]</div>
+                <div class="motion-block">point in direction [<div class="operators-block">[90] - [angle]</div>]</div>
+                <div class="looks-block">say [join [Angle: ] [join [angle] [°]]] for [1] seconds</div>
+            </div>
+            
+            <p>This project allows students to explore angles by rotating a sprite and seeing the angle measurement, helping them understand angular measurement and rotation.</p>
+        </section>
+
+        <section class="section">
+            <h2>Science Applications</h2>
+            <p>Scratch can be used to create simulations and models that help students understand scientific concepts and processes.</p>
+            
+            <h3>Scientific Concepts in Scratch:</h3>
+            <ul>
+                <li><strong>Physics</strong>: Motion, forces, energy, simple machines</li>
+                <li><strong>Biology</strong>: Ecosystems, cell processes, genetics</li>
+                <li><strong>Chemistry</strong>: Molecular interactions, reactions</li>
+                <li><strong>Earth Science</strong>: Weather, geological processes, astronomy</li>
+                <li><strong>Environmental Science</strong>: Ecosystems, climate, sustainability</li>
+            </ul>
+            
+            <h3>Example: Simple Pendulum Simulation</h3>
+            <div class="block-container">
+                <div class="events-block">when green flag clicked</div>
+                <div class="variables-block">set [angle] to [30]</div>
+                <div class="variables-block">set [length] to [100]</div>
+                <div class="variables-block">set [gravity] to [9.8]</div>
+                <div class="variables-block">set [angular velocity] to [0]</div>
+                <div class="control-block">forever</div>
+                <div style="margin-left: 20px;">
+                    <div class="variables-block">set [angular acceleration] to [<div class="operators-block">[<div class="operators-block">[-1] * [gravity]</div>] / [length]</div>] * [<div class="operators-block">[sin] of [angle]</div>]</div>
+                    <div class="variables-block">change [angular velocity] by [angular acceleration]</div>
+                    <div class="variables-block">change [angle] by [angular velocity]</div>
+                    <div class="motion-block">go to x: [<div class="operators-block">[length] * [<div class="operators-block">[sin] of [angle]</div>]</div>] y: [<div class="operators-block">[-1] * [length] * [<div class="operators-block">[cos] of [angle]</div>]</div>]</div>
+                    <div class="control-block">wait [0.05] seconds</div>
+                </div>
+            </div>
+            
+            <p>This simulation models a simple pendulum, allowing students to observe how variables like length and initial angle affect the pendulum's motion, helping them understand concepts like periodic motion and conservation of energy.</p>
+            
+            <h3>Example: Predator-Prey Ecosystem</h3>
+            <div class="block-container">
+                <div class="events-block">when green flag clicked</div>
+                <div class="variables-block">set [predators] to [5]</div>
+                <div class="variables-block">set [prey] to [20]</div>
+                <div class="control-block">repeat [100]</div>
+                <div style="margin-left: 20px;">
+                    <div class="variables-block">set [new prey] to [<div class="operators-block">[prey] * [1.1] - [<div class="operators-block">[0.02] * [prey] * [predators]</div>]</div>]</div>
+                    <div class="variables-block">set [new predators] to [<div class="operators-block">[predators] * [0.9] + [<div class="operators-block">[0.01] * [prey] * [predators]</div>]</div>]</div>
+                    <div class="variables-block">set [prey] to [new prey]</div>
+                    <div class="variables-block">set [predators] to [new predators]</div>
+                    <div class="looks-block">stamp</div>
+                    <div class="motion-block">change y by [-2]</div>
+                </div>
+            </div>
+            
+            <p>This project simulates a predator-prey ecosystem using the Lotka-Volterra equations, helping students understand population dynamics and ecological relationships.</p>
+        </section>
+
+        <section class="section">
+            <h2>Engineering Applications</h2>
+            <p>Scratch can help students develop engineering skills by designing, testing, and refining solutions to problems.</p>
+            
+            <h3>Engineering Concepts in Scratch:</h3>
+            <ul>
+                <li><strong>Design Process</strong>: Iterative design, testing, and improvement</li>
+                <li><strong>Mechanisms</strong>: Simple machines, mechanical systems</li>
+                <li><strong>Structures</strong>: Stability, strength, load distribution</li>
+                <li><strong>Control Systems</strong>: Feedback loops, automation</li>
+                <li><strong>Problem-solving</strong>: Defining problems and developing solutions</li>
+            </ul>
+            
+            <h3>Example: Bridge Strength Tester</h3>
+            <div class="block-container">
+                <div class="events-block">when green flag clicked</div>
+                <div class="variables-block">set [bridge strength] to [50]</div>
+                <div class="variables-block">set [weight] to [0]</div>
+                <div class="looks-block">switch costume to [bridge-intact]</div>
+                
+                <div style="margin-top: 10px;"></div>
+                
+                <div class="events-block">when [space] key pressed</div>
+                <div class="control-block">repeat until &lt;<div class="operators-block">[weight] > [bridge strength]</div>&gt;</div>
+                <div style="margin-left: 20px;">
+                    <div class="variables-block">change [weight] by [5]</div>
+                    <div class="looks-block">say [join [Testing weight: ] [join [weight] [ units]]] for [1] seconds</div>
+                    <div class="control-block">wait [0.5] seconds</div>
+                </div>
+                <div class="looks-block">switch costume to [bridge-broken]</div>
+                <div class="looks-block">say [join [Bridge collapsed at ] [join [weight] [ units]]] for [2] seconds</div>
+            </div>
+            
+            <p>This project simulates a bridge strength test, allowing students to design bridges and test their load-bearing capacity, helping them understand structural engineering concepts.</p>
+        </section>
+
+        <section class="section">
+            <h2>Technology Applications</h2>
+            <p>Beyond teaching programming itself, Scratch can help students understand broader technology concepts and develop digital literacy skills.</p>
+            
+            <h3>Technology Concepts in Scratch:</h3>
+            <ul>
+                <li><strong>Algorithms</strong>: Step-by-step procedures for solving problems</li>
+                <li><strong>Data Representation</strong>: How computers store and process information</li>
+                <li><strong>User Interface Design</strong>: Creating intuitive ways for users to interact with technology</li>
+                <li><strong>Automation</strong>: Using computers to perform repetitive tasks</li>
+                <li><strong>Digital Citizenship</strong>: Responsible use of technology and online communities</li>
+            </ul>
+            
+            <h3>Example: Binary Number Converter</h3>
+            <div class="block-container">
+                <div class="events-block">when green flag clicked</div>
+                <div class="variables-block">set [bit0] to [0]</div>
+                <div class="variables-block">set [bit1] to [0]</div>
+                <div class="variables-block">set [bit2] to [0]</div>
+                <div class="variables-block">set [bit3] to [0]</div>
+                <div class="variables-block">set [decimal] to [0]</div>
+                
+                <div style="margin-top: 10px;"></div>
+                
+                <div class="events-block">when this sprite clicked</div>
+                <div class="control-block">if &lt;<div class="operators-block">[bit0] = [0]</div>&gt; then</div>
+                <div style="margin-left: 20px;">
+                    <div class="variables-block">set [bit0] to [1]</div>
+                </div>
+                <div class="control-block">else</div>
+                <div style="margin-left: 20px;">
+                    <div class="variables-block">set [bit0] to [0]</div>
+                </div>
+                <div class="variables-block">set [decimal] to [<div class="operators-block">[bit0] + [<div class="operators-block">[bit1] * [2]</div>] + [<div class="operators-block">[bit2] * [4]</div>] + [<div class="operators-block">[bit3] * [8]</div>]</div>]</div>
+            </div>
+            
+            <p>This project creates an interactive binary number converter, helping students understand how computers represent numbers in binary format.</p>
+        </section>
+
+        <section class="section">
+            <h2>Integrating STEM Disciplines</h2>
+            <p>One of the greatest strengths of Scratch for STEM education is its ability to integrate multiple disciplines in meaningful ways.</p>
+            
+            <h3>Cross-disciplinary Project Ideas:</h3>
+            <ul>
+                <li><strong>Interactive Solar System</strong>: Combines astronomy, physics, and mathematics</li>
+                <li><strong>Weather Station</strong>: Integrates environmental science, data analysis, and technology</li>
+                <li><strong>Ecosystem Simulator</strong>: Connects biology, mathematics, and environmental science</li>
+                <li><strong>Simple Machine Demonstrations</strong>: Combines physics, engineering, and mathematics</li>
+                <li><strong>Chemical Reaction Visualizer</strong>: Integrates chemistry, mathematics, and visualization</li>
+            </ul>
+            
+            <h3>Example: Interactive Solar System</h3>
+            <div class="block-container">
+                <div class="events-block">when green flag clicked</div>
+                <div class="variables-block">set [Earth distance] to [150]</div>
+                <div class="variables-block">set [Earth speed] to [2]</div>
+                <div class="variables-block">set [Earth angle] to [0]</div>
+                <div class="control-block">forever</div>
+                <div style="margin-left: 20px;">
+                    <div class="variables-block">change [Earth angle] by [Earth speed]</div>
+                    <div class="motion-block">go to x: [<div class="operators-block">[Earth distance] * [<div class="operators-block">[cos] of [Earth angle]</div>]</div>] y: [<div class="operators-block">[Earth distance] * [<div class="operators-block">[sin] of [Earth angle]</div>]</div>]</div>
+                </div>
+            </div>
+            
+            <p>This project (for an Earth sprite orbiting a Sun sprite at the origin) integrates astronomy (planetary motion), physics (orbital mechanics), and mathematics (trigonometry, circular motion).</p>
+            
+            <div class="example-project">
+                <h3>Next Steps</h3>
+                <p>Now that you understand how to apply Scratch to STEM education, let's explore some example projects and tutorials that demonstrate these concepts in action.</p>
+                <p><a href="section8.html">Continue to Section 8: Example Projects and Tutorials →</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Based on resources from the <a href="https://en.scratch-wiki.info/" target="_blank">Scratch Wiki platform</a>.</p>
+        <p>&copy; 2025 Introduction to Programming with Scratch - A STEM Education Course</p>
+    </footer>
+</body>
+</html>
